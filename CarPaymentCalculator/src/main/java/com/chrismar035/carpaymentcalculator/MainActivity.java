@@ -58,21 +58,49 @@ public class MainActivity extends Activity {
     }
 
     public void calculate_and_display_payment() {
+
+        if(errors_present() == false) {
+            TextView total_amount_view = (TextView) findViewById(R.id.total_amount);
+            Float total_amount = Float.parseFloat(total_amount_view.getText().toString());
+
+            TextView months_view = (TextView) findViewById(R.id.months);
+            Float months = Float.parseFloat(months_view.getText().toString());
+
+            TextView apr_view = (TextView) findViewById(R.id.apr);
+            Float apr = Float.parseFloat(apr_view.getText().toString());
+
+            double payment = calculatePayment(total_amount, months, apr);
+
+            String payment_string = formatPayment(payment);
+
+            TextView results_content = (TextView) findViewById(R.id.results_content);
+            results_content.setText(payment_string);
+        }
+
+    }
+
+    public boolean errors_present() {
+        boolean errors_present = false;
+
         TextView total_amount_view = (TextView) findViewById(R.id.total_amount);
-        Float total_amount = Float.parseFloat(total_amount_view.getText().toString());
+        if(total_amount_view.getText().toString().equals("")) {
+            errors_present = true;
+            total_amount_view.setError("how much will you be borrowing?");
+        }
 
         TextView months_view = (TextView) findViewById(R.id.months);
-        Float months = Float.parseFloat(months_view.getText().toString());
+        if(months_view.getText().toString().equals("")) {
+            errors_present = true;
+            months_view.setError("how long the loan be?");
+        }
 
         TextView apr_view = (TextView) findViewById(R.id.apr);
-        Float apr = Float.parseFloat(apr_view.getText().toString());
+        if(apr_view.getText().toString().equals("")) {
+            errors_present = true;
+            apr_view.setError("what APR will you be getting?");
+        }
 
-        double payment = calculatePayment(total_amount, months, apr);
-
-        String payment_string = formatPayment(payment);
-
-        TextView results_content = (TextView) findViewById(R.id.results_content);
-        results_content.setText(payment_string);
+        return errors_present;
     }
 
     public double calculatePayment(double principal, double term, double apr) {
