@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Car Payment Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="calculate">Calculate</string>
+    <string name="results">Results</string>
+    <string name="apr">APR</string>
+    <string name="months">Months</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="results_instructions">Tap Calculate for payment amount</string>
+
+</resources>
