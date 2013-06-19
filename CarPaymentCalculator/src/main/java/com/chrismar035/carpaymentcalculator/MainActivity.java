@@ -1,4 +1,4 @@
-package com.example.carpaymentcalculator;
+package com.chrismar035.carpaymentcalculator;
 
 import android.content.Context;
 import android.os.Bundle;
