@@ -44,17 +44,17 @@
             <file
                 path="/Users/chrismar035/AndroidStudioProjects/CarPaymentCalculatorProject/CarPaymentCalculator/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="action_settings" >Settings
-                </string>
                 <string name="total_amount" >Total Amount
+                </string>
+                <string name="action_settings" >Settings
                 </string>
                 <string name="app_name" >Car Payment Calculator
                 </string>
-                <string name="results" >Results
+                <string name="results_instructions" >Tap Calculate for payment amount
                 </string>
                 <string name="calculate" >Calculate
                 </string>
-                <string name="results_instructions" >Tap Calculate for payment amount
+                <string name="results" >Results
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
